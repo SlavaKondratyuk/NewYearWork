@@ -1,0 +1,142 @@
+/*font-family: 'Dorsa', sans-serif;*/
+/*font-family: 'Pathway Gothic One', sans-serif;
+
+font-family: 'Open Sans', sans-serif;*/
+@import "basestyle.css";
+@import "header.css";
+@import "footer.css";
+
+
+
+
+.gallery {
+    background-color: #ffffff;
+    padding: 3.75rem 2.313rem 4.688rem;
+}
+
+.gallery::after {
+    content: '\f062';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ccce50;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 2%;
+    right: 1.5%;
+    font-family: 'FontAwesome', sans-serif;
+    color: indigo;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+
+.title {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 1.75rem;
+    color: #263555;
+    text-transform: uppercase;
+    margin: 2.375rem;
+}
+
+.gallery-item {
+    margin-bottom: 2.5rem;
+    position: relative;
+
+}
+
+.gallery-item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    z-index: -1;
+}
+
+.gallery-item:nth-last-child(4) {
+    margin-bottom: 0;
+}
+
+.gallery-item:after {
+    content: '\f00e';
+    font-family: 'FontAwesome', sans-serif ;
+    display: block;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 2.75rem;
+    z-index: -1;
+}
+
+/*.gallery-item:hover::after {*/
+    /*display: block;*/
+/*}*/
+
+.gallery-item:hover::before, .gallery-item:hover::after {
+    z-index: 0;
+}
+
+.gallery-item:nth-last-child(-n+3) {
+    display: none;
+}
+
+
+/*media gallery for 768px*/
+
+@media (min-width: 768px) {
+    .gallery-body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .gallery-item {
+        flex-basis: 47.8%;
+    }
+
+    .gallery-item:nth-last-child(-n+3) {
+        margin-bottom: 0;
+        display: block;
+    }
+
+
+    .gallery:after {
+        width: 1.75rem;
+        height: 1.75rem;
+        line-height: 1.75rem;
+
+    }
+
+    .gallery-item:nth-last-child(4) {
+        margin-bottom: 2.5rem;
+    }
+
+    .gallery-item:last-child {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .gallery-item {
+        flex-basis: 32%;
+    }
+
+    .gallery-item:last-child {
+        display: block;
+    }
+
+    .gallery {
+        padding: 3.818rem 6.063rem 3.813rem;
+
+    }
+
+
+}
+
+

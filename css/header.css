@@ -1,0 +1,158 @@
+
+.contaner   {
+    min-width: 30rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    /*height: 2130px;*/
+}
+
+.logo {
+    width: 4.813rem;
+    height: 4.813rem;
+    border-radius: 50%;
+    font-family: 'Dorsa', sans-serif;
+    background-color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 2.063rem;
+    color: #253555;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 4.813rem;
+    margin: 0 auto 1.875rem;
+}
+
+.menu {
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    width: 56%;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.sub-menu {
+    display: none;
+    padding: 0.275rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.menu-link {
+    display: block;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.menu-link:hover {
+    color: #263555;
+}
+
+.menu-item {
+    flex-basis: 33%;
+    text-align: center;
+    position: relative;
+}
+
+.menu-item:hover> .sub-menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+.sub-menu-link {
+    color: #6b7488;
+    font-size: 0.875rem;
+    margin-bottom: 0.375rem;
+
+}
+
+.sub-menu-item {
+    margin-bottom: 0.2rem;
+    text-align: right;
+
+}
+
+.sub-menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.header {
+    margin-bottom: 3.75em;
+}
+
+/*media for 768*/
+
+@media (min-width: 768px) {
+    .menu{
+        width: 37.36%;
+
+    }
+
+    .header {
+        margin-bottom: 1.188rem;
+    }
+
+}
+
+/*media 1024*/
+
+@media (min-width: 1024px) {
+    .menu {
+        flex-wrap: nowrap;
+        width: 80.76%;
+    }
+
+    .header {
+        position: relative;
+        padding: 3rem 0;
+        margin: 3.188rem;
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 8.625rem;
+        height: 8.625rem;
+        line-height: 8.625rem;
+        font-size: 3.75rem;
+    }
+
+    /*.menu-item:nth-last-child(-n+3) {*/
+        /*text-align: right;*/
+    /*}*/
+
+    /*.menu-item:nth-child(-n+3)  {*/
+        /*text-align: left;*/
+    /*}*/
+
+    .menu-link {
+        font-size: 1.75rem;
+    }
+
+    .menu-item:nth-child(3) {
+        margin-right: 6.25rem;
+    }
+
+    .menu-item:nth-child(4) {
+        margin-left: 6.25rem;
+    }
+    
+    .sub-menu-link {
+        font-size: 1.25rem;
+    }
+    
+    .sub-menu-item {
+        text-align: center;
+    }
+
+
+}
